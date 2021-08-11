@@ -1,0 +1,92 @@
+/*
+ * Decompiled with CFR 0.150.
+ */
+package net.minecraft.S;
+
+import net.minecraft.A.h;
+import net.minecraft.S.b;
+import net.minecraft.S.d;
+import net.minecraft.k.m;
+
+public class j
+extends d {
+    @Override
+    public int[] a(int n2, int n3, int n4, int n5) {
+        int n6 = n2 - 1;
+        int n7 = n3 - 1;
+        int n8 = n4 + 2;
+        int n9 = n5 + 2;
+        int[] arrn = this.f.a(n6, n7, n8, n9);
+        int[] arrn2 = b.a(n4 * n5);
+        int n10 = 0;
+        m[] arrm = d.b();
+        block0: while (true) {
+            int n11 = n10;
+            block1: while (n11 < n5) {
+                for (int i2 = 0; i2 < n4; ++i2) {
+                    int n12;
+                    block16: {
+                        int n13;
+                        block15: {
+                            int n14 = arrn[i2 + 1 + (n10 + 1 - 1) * (n4 + 2)];
+                            int n15 = arrn[i2 + 1 + 1 + (n10 + 1) * (n4 + 2)];
+                            int n16 = arrn[i2 + 1 - 1 + (n10 + 1) * (n4 + 2)];
+                            int n17 = arrn[i2 + 1 + (n10 + 1 + 1) * (n4 + 2)];
+                            n12 = arrn[i2 + 1 + (n10 + 1) * n8];
+                            int n18 = 0;
+                            n11 = n14;
+                            if (arrm == null) continue block1;
+                            if (arrm != null) {
+                                if (n11 == 0) {
+                                    ++n18;
+                                }
+                                n13 = n15;
+                            }
+                            if (arrm != null) {
+                                if (n13 == 0) {
+                                    ++n18;
+                                }
+                                n13 = n16;
+                            }
+                            if (arrm != null) {
+                                if (n13 == 0) {
+                                    ++n18;
+                                }
+                                n13 = n17;
+                            }
+                            if (arrm != null) {
+                                if (n13 == 0) {
+                                    ++n18;
+                                }
+                                n13 = n12;
+                            }
+                            if (arrm == null) break block15;
+                            if (n13 != 0) break block16;
+                            n13 = n18;
+                        }
+                        if (n13 > 3) {
+                            arrn2[i2 + n10 * n4] = h.b(net.minecraft.u.d.J);
+                            if (arrm != null) continue;
+                        }
+                    }
+                    arrn2[i2 + n10 * n4] = n12;
+                    if (arrm != null) continue;
+                }
+                ++n10;
+                if (arrm != null) continue block0;
+            }
+            break;
+        }
+        return arrn2;
+    }
+
+    public j(long l2, d d10) {
+        super(l2);
+        this.f = d10;
+    }
+
+    private static gP b(gP gP2) {
+        return gP2;
+    }
+}
+
