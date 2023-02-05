@@ -3,6 +3,4 @@
 
 РЕКОМЕНДУЮ: </br>
 https://vk.com/zamorozkaclient </br>
-https://t.me/oymine_Crash </br>
-https://t.me/oyminebd </br>
 https://discord.io/zamorozka-client <br>
